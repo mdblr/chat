@@ -2,6 +2,8 @@
 ## working with:
   - es6
   - websockets
-  - spa
+  - spa (ng1)
   - babel
-  - node
+  - webpack
+  - nodejs
+  - heroku
