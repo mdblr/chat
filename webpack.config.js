@@ -15,22 +15,25 @@ module.exports = (function config() {
 
   config.module = {};
   config.module.loaders = [{
-    test: path.join(__dirname, 'src/app'),
-    loaders: ['ng-annotate', 'babel-loader']
+    test: /\.js$/,
+    loaders: ['ng-annotate', 'babel-loader'],
+    exclude: /node_modules/
   },
   {
-    test: path.join(__dirname, 'src/app'),
-    include: /\.html$/,
-    loader: 'ngtemplate?relativeTo=' + (path.resolve(__dirname, './src')) + '/!html'
+    test: /\.html$/,
+    loader: 'ngtemplate?relativeTo=' + (path.resolve(__dirname, './src')) + '/!html',
+    exclude: /index\.html/
   }];
-
-  config.resolve.modulesDirectories = ['node_modules'];
 
   config.plugins = [
     new html({
       template: 'src/index.html'
     })
   ];
+
+  config.resolve = {
+    modulesDirectories: ['node_modules']
+  }
 
   return config;
 }());
