@@ -9,7 +9,13 @@ module.exports = (function config() {
 
   config.output = {};
   config.output.path = path.join(__dirname, 'dist');
-  config.output.filename = 'bundle.[hash].js';
+  config.output.filename = 'bundle.js';
+  if (script === 'start')
+    config.output.publicPath = 'http://localhost:8080/assets/';
+  else
+    config.output.publicPath = '/assets/';
+
+  config.contentBase = 'http://www.localhost:9090/';
 
   config.devtools = script === 'build' ? 'source-map' : 'eval-source-map';
 
