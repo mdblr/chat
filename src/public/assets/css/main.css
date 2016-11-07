@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+.f, .f * {
+  display: flex;
+}
+
+.r {
+  flex-direction: row;
+}
+
+.c {
+  flex-direction: column;
+}
+
+#chat {
+  padding: 1px;
+  height: 200px;
+  overflow: scroll; 
+}
+
+.convo-border {
+  border: 1px dotted black;
+}
+
+#group {
+  height: 200px;
+}
+
+textarea {
+  width: 100%;
+}
