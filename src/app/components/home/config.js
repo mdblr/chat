@@ -3,7 +3,7 @@ export default function($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       controller: 'homeCtrl',
-      controllerAs: '$ctrl',
-      template: '<div><convo></convo></div>'
+      controllerAs: 'ctrl',
+      template: '<div><convo-dir></convo-dir></div>'
     });
 }
