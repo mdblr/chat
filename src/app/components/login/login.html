@@ -1,0 +1,7 @@
+<h1>Enter a username</h1>
+<form name='form'>
+  <input type='text' ng-model='name' name='name' ng-model-options="{ debounce: 250 }" username/>
+  <input type='submit'/>
+  <span ng-show="form.name.$pending.username">Checking if this name is available...</span>
+  <span ng-show="form.name.$error.username">This username is already taken!</span>
+</form>
