@@ -1,9 +1,9 @@
 export default function($routeProvider, $locationProvider) {
   'ng-inject';
   $routeProvider
-    .when('/', {
+    .when('/chat', {
       controller: 'homeCtrl',
-      controllerAs: 'ctrl',
+      controllerAs: '$ctrl',
       template: '<div><convo-dir></convo-dir></div>'
     });
 }
