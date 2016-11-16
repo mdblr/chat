@@ -2,15 +2,15 @@
   <main class='col-md-8'>
     <section>
       <div id='chat' class='convo-border' >
-        <div ng-repeat='msg in ctrl.convo track by $index'>
+        <div ng-repeat='msg in $ctrl.convo track by $index'>
           {{msg}}
         </div>
       </div>
     </section>
 
     <section class='f r'>
-      <textarea ng-model='ctrl.message'></textarea>
-      <button class='btn btn-info' ng-click='ctrl.send()'>Send</button>
+      <textarea ng-model='$ctrl.message'></textarea>
+      <button class='btn btn-info' ng-click='$ctrl.send()'>Send</button>
     </section>
   </main>
 
