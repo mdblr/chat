@@ -1,10 +1,11 @@
-import chatTemplate from './convo.html';
+import convoTML from './convo.html';
 
 export default function() {
-  const ddo = {};
+  const definition = {};
 
-  ddo.restrict = 'E';
-  ddo.templateUrl = chatTemplate;
+  definition.restrict = 'E';
+  definition.templateUrl = convoTML;
+  // definition.scope = true;
 
-  return ddo;
+  return definition;
 };
