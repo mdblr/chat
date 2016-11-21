@@ -1,4 +1,4 @@
-export default function($routeProvider, $locationProvider) {
+export default function($routeProvider) {
   'ng-inject';
   $routeProvider
     .when('/chat', {
