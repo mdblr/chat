@@ -38,7 +38,7 @@ module.exports = (function config() {
   ];
 
   config.resolve = {
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['node_modules','app']
   }
 
   return config;
