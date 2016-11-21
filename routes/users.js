@@ -1,11 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-var usernames = ['Jim', 'John', 'Jill', 'Jackie'];
+var usernames = [];
 
-router.post('/', (req, res) => {
-  let result = usernames.indexOf(req.body.username);
-  res.send({result});
+router.post('/current', (req, res) => {
+  let userExists = usernames.indexOf(req.body.username) < 0 ? false : true;
+  res.send({userExists});
+});
+
+router.post('/add', (req, res) => {
+  usernames.push(req.body.username);
+  res.end();
 });
 
 module.exports = router;
