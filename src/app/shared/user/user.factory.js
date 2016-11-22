@@ -6,12 +6,15 @@ export default function($http, $location) {
   return {
     submit,
     set,
-    get
+    get,
+    rm
   }
 
   function submit(username) {
     const submitAPI = 'http://localhost:9090/users/add';
-    $http.post(submitAPI, {username})
+    $http.post(submitAPI, {
+        username
+      })
       .then(() => {
         set(username);
         $location.path('/chat');
@@ -26,4 +29,13 @@ export default function($http, $location) {
     return user;
   }
 
+  function rm(username) {
+    const rmAPI = 'http://localhost:9090/users/remove';
+    $http.delete(rmAPI, {
+        username
+      })
+      .then(() => {
+        console.log('user deleted');
+      });
+  }
 }
