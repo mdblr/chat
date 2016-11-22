@@ -1,5 +1,5 @@
 export default function($http, $location) {
-  'ng-inject';
+  'ngInject';
 
   let user;
 

@@ -2,8 +2,8 @@
 
 import io from 'socket.io-client';
 
-export default function home($scope, user, $window, message) {
-  'ng-inject';
+export default function home(user, message, $scope, $window) {
+  'ngInject';
 
   const socket = io.connect()
   const vm = this;
