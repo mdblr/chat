@@ -1,7 +1,7 @@
 import templateUrl from './login.html';
 
 export default function($routeProvider, $locationProvider) {
-  'ng-inject';
+  'ngInject';
   $routeProvider
     .when('/', {
       templateUrl: templateUrl

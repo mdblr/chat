@@ -1,7 +1,7 @@
 import controller from './login.controller';
 
 export default function($q, $timeout, $http) {
-  'ng-inject';
+  'ngInject';
 
   return {
     controller: controller,

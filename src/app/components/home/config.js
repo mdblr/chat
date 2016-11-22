@@ -1,5 +1,5 @@
 export default function($routeProvider) {
-  'ng-inject';
+  'ngInject';
   $routeProvider
     .when('/chat', {
       controller: 'homeCtrl',
