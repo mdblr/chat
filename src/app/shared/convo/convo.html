@@ -1,32 +1,21 @@
-<div class='container-fluid'>
+<div class='container f r'>
 
-  <main class='col-md-8'>
+    <aside id='group' class='convo-border'></aside>
 
-    <section>
-      <div id='chat' class='convo-border' >
-        <div ng-repeat='data in $ctrl.conversation track by $index'>
-          {{data.user}}: {{data.msg}}
-        </div>
-      </div>
-    </section>
+    <main id='chat' class='convo-border'>
+        <section id='messages'>
+            <div ng-repeat='data in $ctrl.conversation track by $index'>
+                {{data.user}}:
+                {{data.msg}}
+            </div>
+        </section>
 
-    <section class='f r'>
-      <textarea ng-model='$ctrl.userMessage'>
-      </textarea>
-      <button
-        class='btn btn-info'
-        ng-disabled='!$ctrl.userMessage'
-        ng-click='$ctrl.send()'>
-        Send
-      </button>
-    </section>
-
-  </main>
-
-  <aside class='col-md-4'>
-
-    <section id='group' class='convo-border'></section>
-
-  </aside>
+        <section id='new-message'>
+            <textarea ng-model='$ctrl.userMessage'></textarea>
+            <button ng-disabled='!$ctrl.userMessage' ng-click='$ctrl.send()'>
+                Send
+            </button>
+        </section>
+    </main>
 
 </div>
