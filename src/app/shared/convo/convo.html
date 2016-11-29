@@ -1,18 +1,26 @@
-<div class='container f r'>
+<div class='container'>
 
-    <aside id='group' class='convo-border'></aside>
+    <aside id='group'>
+      <input type='text' ng-model='$ctrl.newName' placeholder='change name here'/>
+      <button ng-click='$ctrl.editUser($ctrl.username,$ctrl.newName)'
+        ng-disabled='!$ctrl.newName'>Edit</button>
+    </aside>
 
-    <main id='chat' class='convo-border'>
+    <main id='chat'>
         <section id='messages'>
             <div ng-repeat='data in $ctrl.conversation track by $index'>
-                {{data.user}}:
-                {{data.msg}}
+                <span ng-if="data.user && data.msg">
+                  {{data.user}}: {{data.msg}}
+                </span>
+                <span ng-if="data.userChange">
+                  {{data.userChange}}
+                </span>
             </div>
         </section>
 
         <section id='new-message'>
             <textarea ng-model='$ctrl.userMessage'></textarea>
-            <button ng-disabled='!$ctrl.userMessage' ng-click='$ctrl.send()'>
+            <button ng-disabled='!$ctrl.userMessage' ng-click='$ctrl.send($ctrl.userMessage, $ctrl.username)'>
                 Send
             </button>
         </section>
