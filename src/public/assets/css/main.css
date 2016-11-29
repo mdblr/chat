@@ -2,68 +2,63 @@
   box-sizing: border-box;
 }
 
+body, #container {
+  background-color: #009688;
+}
+
 @media(max-width:600px) {
   #group {
     display: none;
   }
 
-  .container {
-    width: 400px;
-  }
-
-  main {
-    width: 400px;
-  }
 }
 
 @media(max-width:900px) {
-  #chat > * {
-    width: 500px;
+  #chat {
+    width: 100px;
   }
 }
 
-/*@media(min-width:901px) {
-
-}*/
-
 #chat {
-  padding: 1px;
-  width: 1000px;
+  width: 100%;
+  background-color: #BDBDBD;
 }
 
 #group {
-  width: 20vw;
-  height: 100%;
+  width: 18vw;
+  margin-right: 10px;
+  background-color: #00796B;
 }
 
 #messages {
   overflow-y: scroll;
-  height: 90%;
+  height: 450px;
+  background-color: white;
 }
 
 #new-message {
+  padding: 110px 0px 50px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: #00796B;
 }
 
 #new-message button {
+  height: 50px;
+  width: 50px;
   margin-left: 10px;
-  border-radius: 100%;
-}
-
-.convo-border {
-  border: 1px dotted black;
+  border-radius: 50%;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  height: 98vh;
-  width: 98vw;
+  justify-content: center;
+  padding: 20px;
 }
 
 textarea {
-  width: auto;
+  width: 80%;
   resize: none;
 }
