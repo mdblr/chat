@@ -7,7 +7,8 @@ export default function($http, $location) {
     submit,
     set,
     get,
-    rm
+    rm,
+    editUser
   }
 
   function submit(username) {
@@ -37,5 +38,14 @@ export default function($http, $location) {
       .then(() => {
         console.log('user deleted');
       });
+  }
+
+  function editUser(user, newName) {
+    const editAPI = 'http://localhost:9090/users/edit';
+    return $http
+      .put(editAPI, {
+        user,
+        newName
+      })
   }
 }
