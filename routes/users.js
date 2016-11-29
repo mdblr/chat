@@ -13,6 +13,14 @@ router.post('/add', (req, res) => {
   res.end();
 });
 
+router.put('/edit', (req, res) => {
+  let user = currentUsers.indexOf(req.body.user);
+  currentUsers[user] = req.body.newName;
+  res.send({
+    user: currentUsers[user]
+  });
+});
+
 router.delete('/remove', (req, res) => {
   let index = currentUsers.indexOf(req.body.username);
   if (index < 0) return false;
